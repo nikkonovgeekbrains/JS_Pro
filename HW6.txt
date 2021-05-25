@@ -1,0 +1,460 @@
+Задание 1
+
+Текст скрипта:
+sed -i '/^$/d' task1.txt
+sed -i 's/[a-z]/\U&/g' task1.txt
+
+
+Проверка:
+nikolay@nikolay-VirtualBox:~/linux_learning/HW6$ cat task1.txt
+String1
+
+string2
+
+
+
+
+string3
+
+
+
+end
+
+nikolay@nikolay-VirtualBox:~/linux_learning/HW6$ bash script_task1 
+nikolay@nikolay-VirtualBox:~/linux_learning/HW6$ cat task1.txt
+STRING1
+STRING2
+STRING3
+END
+
+
+Задание 2
+
+nikolay@nikolay-VirtualBox:~/linux_learning/HW6$ mkdir test_task2; for year in {2010..2017}; do mkdir -p ./test_task2/$year; for month in {01..12}; do mkdir -p ./test_task2/$year/$month; for file in {001..003}; do echo "file $file" > ./test_task2/$year/$month/$file.txt; done; done; done
+nikolay@nikolay-VirtualBox:~/linux_learning/HW6$ cd test_task2/
+nikolay@nikolay-VirtualBox:~/linux_learning/HW6/test_task2$ ls
+2010  2011  2012  2013  2014  2015  2016  2017
+nikolay@nikolay-VirtualBox:~/linux_learning/HW6/test_task2$ tree
+.
+├── 2010
+│   ├── 01
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 02
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 03
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 04
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 05
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 06
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 07
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 08
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 09
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 10
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 11
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   └── 12
+│       ├── 001.txt
+│       ├── 002.txt
+│       └── 003.txt
+├── 2011
+│   ├── 01
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 02
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 03
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 04
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 05
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 06
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 07
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 08
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 09
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 10
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 11
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   └── 12
+│       ├── 001.txt
+│       ├── 002.txt
+│       └── 003.txt
+├── 2012
+│   ├── 01
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 02
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 03
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 04
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 05
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 06
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 07
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 08
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 09
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 10
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 11
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   └── 12
+│       ├── 001.txt
+│       ├── 002.txt
+│       └── 003.txt
+├── 2013
+│   ├── 01
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 02
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 03
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 04
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 05
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 06
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 07
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 08
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 09
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 10
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 11
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   └── 12
+│       ├── 001.txt
+│       ├── 002.txt
+│       └── 003.txt
+├── 2014
+│   ├── 01
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 02
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 03
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 04
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 05
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 06
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 07
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 08
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 09
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 10
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 11
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   └── 12
+│       ├── 001.txt
+│       ├── 002.txt
+│       └── 003.txt
+├── 2015
+│   ├── 01
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 02
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 03
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 04
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 05
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 06
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 07
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 08
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 09
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 10
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 11
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   └── 12
+│       ├── 001.txt
+│       ├── 002.txt
+│       └── 003.txt
+├── 2016
+│   ├── 01
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 02
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 03
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 04
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 05
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 06
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 07
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 08
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 09
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 10
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   ├── 11
+│   │   ├── 001.txt
+│   │   ├── 002.txt
+│   │   └── 003.txt
+│   └── 12
+│       ├── 001.txt
+│       ├── 002.txt
+│       └── 003.txt
+└── 2017
+    ├── 01
+    │   ├── 001.txt
+    │   ├── 002.txt
+    │   └── 003.txt
+    ├── 02
+    │   ├── 001.txt
+    │   ├── 002.txt
+    │   └── 003.txt
+    ├── 03
+    │   ├── 001.txt
+    │   ├── 002.txt
+    │   └── 003.txt
+    ├── 04
+    │   ├── 001.txt
+    │   ├── 002.txt
+    │   └── 003.txt
+    ├── 05
+    │   ├── 001.txt
+    │   ├── 002.txt
+    │   └── 003.txt
+    ├── 06
+    │   ├── 001.txt
+    │   ├── 002.txt
+    │   └── 003.txt
+    ├── 07
+    │   ├── 001.txt
+    │   ├── 002.txt
+    │   └── 003.txt
+    ├── 08
+    │   ├── 001.txt
+    │   ├── 002.txt
+    │   └── 003.txt
+    ├── 09
+    │   ├── 001.txt
+    │   ├── 002.txt
+    │   └── 003.txt
+    ├── 10
+    │   ├── 001.txt
+    │   ├── 002.txt
+    │   └── 003.txt
+    ├── 11
+    │   ├── 001.txt
+    │   ├── 002.txt
+    │   └── 003.txt
+    └── 12
+        ├── 001.txt
+        ├── 002.txt
+        └── 003.txt
+
+
+Задание 4
+
+nikolay@nikolay-VirtualBox:~/linux_learning/HW6$ grep 'warning' /var/log/syslog | tail -n5
+May 21 23:07:11 nikolay-VirtualBox gnome-shell[1548]: Window manager warning: Overwriting existing binding of keysym 35 with keysym 35 (keycode e).
+May 21 23:07:11 nikolay-VirtualBox gnome-shell[1548]: Window manager warning: Overwriting existing binding of keysym 36 with keysym 36 (keycode f).
+May 21 23:07:11 nikolay-VirtualBox gnome-shell[1548]: Window manager warning: Overwriting existing binding of keysym 37 with keysym 37 (keycode 10).
+May 21 23:07:11 nikolay-VirtualBox gnome-shell[1548]: Window manager warning: Overwriting existing binding of keysym 38 with keysym 38 (keycode 11).
+May 21 23:07:11 nikolay-VirtualBox gnome-shell[1548]: Window manager warning: Overwriting existing binding of keysym 39 with keysym 39 (keycode 12).
+nikolay@nikolay-VirtualBox:~/linux_learning/HW6$ grep 'error' /var/log/syslog | tail -n5
+May 21 23:09:10 nikolay-VirtualBox systemd-resolved[591]: Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+May 21 23:14:10 nikolay-VirtualBox systemd-resolved[591]: Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+May 21 23:19:10 nikolay-VirtualBox systemd-resolved[591]: Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+May 21 23:29:10 nikolay-VirtualBox systemd-resolved[591]: message repeated 2 times: [ Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.]
+May 21 23:34:10 nikolay-VirtualBox systemd-resolved[591]: Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+nikolay@nikolay-VirtualBox:~/linux_learning/HW6$ grep 'info' /var/log/syslog | tail -n5
+May 21 22:08:36 nikolay-VirtualBox NetworkManager[628]: <info>  [1621616916.2582] manager: NetworkManager state is now CONNECTED_SITE
+May 21 22:08:40 nikolay-VirtualBox NetworkManager[628]: <info>  [1621616920.6248] manager: NetworkManager state is now CONNECTED_GLOBAL
+May 21 22:28:59 nikolay-VirtualBox NetworkManager[628]: <info>  [1621618139.2575] manager: NetworkManager state is now CONNECTED_SITE
+May 21 22:29:00 nikolay-VirtualBox NetworkManager[628]: <info>  [1621618140.6064] manager: NetworkManager state is now CONNECTED_GLOBAL
+May 21 22:56:52 nikolay-VirtualBox NetworkManager[628]: <info>  [1621619812.0056] agent-manager: agent[7811577241f88eb0,:1.83/org.gnome.Shell.NetworkAgent/1000]: agent registered
+
+
+
+Задание 5
+nikolay@nikolay-VirtualBox:~/linux_learning/HW6$ echo "reboot" | sudo at now + 1 minute
+warning: commands will be executed using /bin/sh
+job 1 at Fri May 21 23:43:00 2021
+

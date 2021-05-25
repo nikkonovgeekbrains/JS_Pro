@@ -1,0 +1,2 @@
+sed -i '/^$/d' task1.txt
+sed -i 's/[a-z]/\U&/g' task1.txt
